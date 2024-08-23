@@ -1,0 +1,9 @@
+fake_useragent == 1.5.1
+requests       == 2.32.3
+schedule       == 1.2.2
+ddddocr        == 1.5.5
+Pillow         == 9.5.0
+loguru         == 0.7.2
+datetime       == 5.5
+tenacity       == 9.0.0
+windows_toasts == 1.2.0

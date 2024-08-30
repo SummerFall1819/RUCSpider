@@ -14,7 +14,7 @@ from Ui_spider import Ui_MainWindow
 
 from components import RUCSpider, SelectorManager
 
-        
+
 class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
     
     # The signal was sent to spider_window with id,pwd,code,captcha_id

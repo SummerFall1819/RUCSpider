@@ -1,5 +1,7 @@
 import sys
-from typing import List, Dict, Callable
+from typing import List, Dict, Callable, Literal, NewType
+
+Methods = Literal['Void','Toaster','WxPusher']
 
 from loguru import logger
 
@@ -160,6 +162,8 @@ NOTIFIER:Dict[str,Callable] = {
     'toast': toast_notifier
 }
 
+
+DEFAULT_LECTURE = ["素质拓展认证","形势与政策","形势与政策讲座"]
 
 
 

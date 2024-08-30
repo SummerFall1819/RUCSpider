@@ -18,6 +18,7 @@ from tenacity import retry, stop_after_attempt, wait_fixed,retry_if_exception
 
 from constants import ALIAS, LOGGER_FORMAT, NOTIFIER
 from constants import SELECTORS
+from constants import Methods
 
 COOKIE_VALID_TIME = 18000
 
@@ -246,6 +247,8 @@ class RUCSpider(object):
         self.mapping:Dict[str:int] = ALIAS
         self.locking:bool = False
         
+        self.notify_method: Methods = 'Void'
+        
     def __repr__(self) -> str:
         return 'Spider'
     
@@ -405,7 +408,10 @@ class RUCSpider(object):
         cookie = session.cookies.get_dict()
         self.cookie_maintainer.update_content(cookie)
         return session
-        
+    
+    def set_notify(self, notify: Methods):
+        self.notify_method = notify
+        self.notice = NOTIFIER[self.notify_method]
         
     def export_cookie(self) -> str:
         cookie = self.cookie_maintainer.get_content()

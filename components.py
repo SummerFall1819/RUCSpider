@@ -5,7 +5,6 @@ import sys
 import json
 import base64
 import pickle
-import atexit
 from typing import Literal, Dict, Any, Union, List, Callable, Set, Tuple
 
 import requests
